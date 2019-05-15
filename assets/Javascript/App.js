@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
 $(document).ready(function () {
     $("#getWeather").click(function () {
         var city = $("#city").val();
