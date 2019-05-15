@@ -1,13 +1,44 @@
 $(document).ready(function () {
+    $("#getWeather").click(function () {
+        var city = $("#city").val();
+        event.preventDefault();
+
+        if (city != "") {
+            //this api call weather 
+            $.ajax({
+                url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=imperial" + "&APPID=0d662bff66bb9cd3cbf1260d8c1c69d5",
+                type: "GET",
+                dataType: "jsonp",
+                success: function (data) {
 
 
-// Your web app's Firebase configuration
-var firebaseConfig = {
-    apiKey: "AIzaSyDzxmx6cf6vlF-W-6G5lCj8WNb-5_lzJW4",
-    authDomain: "project-1-937d6.firebaseapp.com",
-    databaseURL: "https://project-1-937d6.firebaseio.com",
-    projectId: "project-1-937d6",
-    storageBucket: "project-1-937d6.appspot.com",
-    messagingSenderId: "1011145173029",
-    appId: "1:1011145173029:web:ac65f04603865158"
-  };
+                    //creating elements 
+                    var widget = show(data);
+
+                    //select and append created elemts to parent edlement
+                    $("#showweather").html(widget);
+
+                    console.log(data);
+                    // $("#city").val("") ;
+                }
+
+
+            });
+        } else {
+            $("#error").html("field cannot be empty");
+        }
+
+    });
+
+});
+
+function show(data) {
+    return "<h4><strong>Weather: </strong>" + data.weather[0].main + "</h4>" +
+        "<h4><strong>Description: </strong>" + data.weather[0].description + "</h4>" +
+        "<h4><strong>Humidity: </strong>" + data.main.humidity + "</h4>" +
+        "<h4> <strong>Windspeed: </strong> " + data.wind.speed + "</h4>" +
+        "<h4> <strong>Tempraure: </strong>" + data.main.temp + " Degree F" + "</h4>" +
+        "<h4><strong>city Name: </strong>" + data.name + "</h4>";
+
+
+}

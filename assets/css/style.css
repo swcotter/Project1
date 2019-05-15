@@ -19,3 +19,8 @@ body {
     grid-template-columns: 50% 50%;
     grid-template-rows: auto;
 }
+
+.carousel {
+    width:640px;
+    height:360px;
+  }
