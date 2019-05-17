@@ -39,7 +39,7 @@ $("#button").on('click', function (e) {
       //  console.log(response);
       
       console.log(result[j]);
-      console.log(result[j].addresses[0].postalCode)
+      console.log(result[j].addresses[0].postalCode);
       var zipCode = result[j].addresses[0].postalCode;
       var list = $("<div class = 'container'>");
       list.html("<p> Name: " + result[j].fullName + "</p>" + "<br>" + "<p> Description: " + result[j].description + "</p>" + "<br>" +"<p> Designation: " + result[j].designation + "</p>" + "<p> Direction: " + result[j].directionsInfo + "</p>" + "<br>" + "<hr>" );
@@ -57,7 +57,8 @@ $("#button").on('click', function (e) {
           // weatherInfo.attr("id", ulist);
           var listItems = $("<div class = 'container'>");
         // listItems.html()
-        listItems.html("<h5> Humidity: "+ data.main.humidity + "</h5>" + "<h5> Temprature: " + data.main.temp + "</h5>" + "<br>");
+        listItems.html("<h5> Humidity: "+ data.main.humidity + "</h5>" + "<h5> Temprature: " + data.main.temp + "</h5>" + "<br>" +
+         "<h5>It is: " + data.weather[0].main + " Right Now</h5>" + "<br>");
         // listItems.text(response.data[j].description);
         
         // listItems.append(weatherInfo);
