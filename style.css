@@ -10,7 +10,6 @@
     -ms-transition: opacity 1s;
     -o-transition: opacity 1s;
     transition: opacity 1s;
-
 }
 .carousel .one {
     background: url(assets/images/image1.jpg);
