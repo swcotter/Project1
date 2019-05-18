@@ -1,0 +1,63 @@
+
+
+.carousel { z-index: -99; } /* keeps this behind all content */
+.carousel .item {
+    position: fixed; 
+    width: 100%; height: 100%;
+    margin-left: -129px;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+
+}
+.carousel .one {
+    background: url(assets/images/image1.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+}
+.carousel .two {
+    background: url(assets/images/deathvalley.jpg);
+     background-size: cover; 
+     -moz-background-size: cover; 
+}
+.carousel .three {
+    background: url(assets/images/background.jpg);
+     background-size: cover; 
+    -moz-background-size: cover; 
+}
+.carousel .four {
+    background: url(assets\images\grizzy.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+}
+.carousel .five {
+    background: url(assets\images\Kent_Bass-Harbor.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+}
+.carousel .six {
+    background: url(assets\images\Yellowstone1-640x418.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+}.carousel .seven {
+    background: url(assets\images\whitesands.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+}
+.carousel .active.left {
+    left:0;
+    opacity:0;
+    z-index:2;
+}
+.pro{
+    border: solid 1px grey;
+    text-align: center;
+    color:black;
+   
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background:rgb(226, 195, 154);
+
+}
